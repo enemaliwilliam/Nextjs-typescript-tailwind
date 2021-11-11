@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 
 export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(`http://localhost:3000/api/folder`);
-  const folders = await res.json();
+  const folders = []; // await res.json();
 
   if (!folders) {
     return {
